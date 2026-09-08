@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحاسبة الاحترافية</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+    </div>
+
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display-section">
+                <div class="history-display" id="historyDisplay"></div>
+                <div class="main-display" id="mainDisplay">0</div>
+                <div class="expression-display" id="expressionDisplay"></div>
+            </div>
+
+            <div class="mode-toggle">
+                <button class="mode-btn active" data-mode="basic">أساسي</button>
+                <button class="mode-btn" data-mode="scientific">علمي</button>
+            </div>
+
+            <div class="buttons-section">
+                <!-- Scientific buttons (hidden by default) -->
+                <div class="scientific-buttons hidden" id="scientificButtons">
+                    <button class="btn btn-scientific" data-action="sin">sin</button>
+                    <button class="btn btn-scientific" data-action="cos">cos</button>
+                    <button class="btn btn-scientific" data-action="tan">tan</button>
+                    <button class="btn btn-scientific" data-action="log">log</button>
+                    <button class="btn btn-scientific" data-action="ln">ln</button>
+                    <button class="btn btn-scientific" data-action="sqrt">√</button>
+                    <button class="btn btn-scientific" data-action="power">x^y</button>
+                    <button class="btn btn-scientific" data-action="factorial">n!</button>
+                    <button class="btn btn-scientific" data-action="pi">π</button>
+                    <button class="btn btn-scientific" data-action="e">e</button>
+                    <button class="btn btn-scientific" data-action="rad">Rad</button>
+                    <button class="btn btn-scientific" data-action="deg">Deg</button>
+                </div>
+
+                <!-- Basic buttons -->
+                <div class="basic-buttons" id="basicButtons">
+                    <button class="btn btn-function" data-action="clear">AC</button>
+                    <button class="btn btn-function" data-action="backspace">⌫</button>
+                    <button class="btn btn-function" data-action="percent">%</button>
+                    <button class="btn btn-operator" data-value="/">÷</button>
+
+                    <button class="btn btn-number" data-value="7">7</button>
+                    <button class="btn btn-number" data-value="8">8</button>
+                    <button class="btn btn-number" data-value="9">9</button>
+                    <button class="btn btn-operator" data-value="*">×</button>
+
+                    <button class="btn btn-number" data-value="4">4</button>
+                    <button class="btn btn-number" data-value="5">5</button>
+                    <button class="btn btn-number" data-value="6">6</button>
+                    <button class="btn btn-operator" data-value="-">−</button>
+
+                    <button class="btn btn-number" data-value="1">1</button>
+                    <button class="btn btn-number" data-value="2">2</button>
+                    <button class="btn btn-number" data-value="3">3</button>
+                    <button class="btn btn-operator" data-value="+">+</button>
+
+                    <button class="btn btn-number" data-value="0">0</button>
+                    <button class="btn btn-number" data-value="00">00</button>
+                    <button class="btn btn-number" data-value=".">.</button>
+                    <button class="btn btn-equals" data-action="calculate">=</button>
+                </div>
+            </div>
+
+            <div class="memory-section">
+                <button class="memory-btn" data-action="mc">MC</button>
+                <button class="memory-btn" data-action="mr">MR</button>
+                <button class="memory-btn" data-action="m+">M+</button>
+                <button class="memory-btn" data-action="m-">M-</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
